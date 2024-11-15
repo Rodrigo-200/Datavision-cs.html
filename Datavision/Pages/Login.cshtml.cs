@@ -8,5 +8,14 @@ namespace Datavision.Pages
         public void OnGet()
         {
         }
+
+        public IActionResult OnPostLogin()
+        {
+            
+        }
+        public IActionResult OnPostRegistrer()
+        {
+            
+        }
     }
 }
