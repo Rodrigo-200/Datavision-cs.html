@@ -17,13 +17,18 @@ namespace Datavision.Pages
 
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPostComment()
         {
             string name = Request.Form["Username"];
             string email = Request.Form["Commentemail"];
             string Comment = Request.Form["Comment"];
 
+            return;
+        }
 
+        public IActionResult OnPostContact()
+        {
+            return;
         }
     }
 }
