@@ -1,0 +1,195 @@
+﻿@page
+@model Datavision.Pages.LoginModel
+@{
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataVision</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+</head>
+
+<body id="top" class="dark_theme">
+    <header class="header" data-header>
+        <div class="container">
+            <h1 class="h1 logo">
+                <a href="#">DataVision<span>.</span></a>
+            </h1>
+            <div class="navbar-actions">
+                <select name="language" id="lang">
+                    <option value="pt">PT</option>
+                </select>
+                <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+                    <span class="icon"></span>
+                </button>
+            </div>
+            <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </button>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="index.html" href="#about" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Sobre Nós</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Sobre S.I</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Vantagens S.I</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="navbar-link">S.I populares</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Contacto</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article class="container">
+            <!--
+                    - #HERO
+                  -->
+
+            <section class="hero" id="home">
+
+                <figure class="hero-banner">
+
+
+                    <img src="~/images/beneficios-sistemas-1-removebg-preview.png" alt="Face-img" class="w-100">
+
+
+                </figure>
+
+                <div class="hero-content">
+
+                    <h2 class="h2 hero-title">Explora o mundo de Sistemas de Informação</h2>
+
+                    <a href="#Login_Section" class="btn btn-primary">Contacte-nos</a>
+
+                </div>
+
+                <ul class="hero-social-list">
+
+                    <li>
+                        <a href="https://www.facebook.com/inete.pt/?locale=pt_PT" class="hero-social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+
+                            <div class="tooltip">Facebook</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/inete_lisboa/?hl=pt" class="hero-social-link">
+                            <ion-icon name="logo-Instagram"></ion-icon>
+
+                            <div class="tooltip">Instagram</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/company/inete/?originalSubdomain=pt" class="hero-social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+
+                            <div class="tooltip">Linkedin</div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="#Login_Section" class="scroll-down">Scroll</a>
+
+            </section>
+
+            </section>
+
+            <!-- Login Section -->
+            <section id="Login_Section">
+                <form id="LoginForm" action="" class="Loginreg-form">
+                    <div class="form-wrapper">
+                        <label class="form-label">Nome de utilizador</label>
+                        <div class="input-wrapper">
+                            <input type="text" name="Nome_User" id="Nome_User" required placeholder="Nome de Utilizador" class="input-field">
+                            <ion-icon name="person-circle"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+                        <label class="form-label">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" name="Password" id="Password" required placeholder="Password" class="input-field">
+                            <ion-icon name="key"></ion-icon>
+                        </div>
+                        <button id="Loginbtn">Login</button>
+
+                    </div>
+                    <a href="#Register_Section" class="toggleRegisterbtn" id="toggleRegister">Ainda não criou a sua conta?</a>
+                </form>
+
+            </section>
+
+            <!-- Register Section -->
+            <section id="Register_Section" style="display: none;">
+                <form id="RegisterForm" action="" class="Loginreg-form">
+                    <div class="form-wrapper">
+                        <label class="form-label">Nome de utilizador</label>
+                        <div class="input-wrapper">
+                            <input type="text" name="Nome_User" id="Register_Nome_User" required placeholder="Nome de Utilizador" class="input-field">
+                            <ion-icon name="person-circle"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+                        <label class="form-label">Email</label>
+                        <div class="input-wrapper">
+                            <input type="email" name="Email" id="Email" required placeholder="Your Email" class="input-field">
+                            <ion-icon name="mail"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="form-wrapper">
+                        <label class="form-label">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" name="Password" id="Register_Password" required placeholder="Password" class="input-field">
+                            <ion-icon name="mail"></ion-icon>
+                        </div>
+                    </div>
+                    <button id="Registerbtn">Register</button>
+                    <a href="#Login_Section" class="toggleRegisterbtn" id="toggleLogin">Já tem uma conta?</a>
+                </form>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <h1 class="h1 logo">DataVision<span>.</span></h1>
+            <p class="footer-text" data-translate="footerText">© 2024 DataVision. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

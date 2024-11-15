@@ -1,0 +1,885 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataVision</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="~/css/site.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+          rel="stylesheet">
+</head>
+
+<body id="top" class="dark_theme">
+
+    <!-- HEADER -->
+    <header class="header" data-header>
+        <div class="container">
+
+            <h1 class="h1 logo">
+                <a href="#">DataVision<span>.</span></a>
+            </h1>
+
+            <div class="navbar-actions">
+                <select name="language" id="lang">
+                    <option value="pt">PT</option>
+                </select>
+
+                <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+                    <span class="icon"></span>
+                </button>
+            </div>
+
+            <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </button>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="#home" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="navbar-link">Sobre Nós</a>
+                    </li>
+
+                    <li>
+                        <a href="#aboutI.S" class="navbar-link">Sobre S.I</a>
+                    </li>
+
+                    <li>
+                        <a href="#I.S Advantages" class="navbar-link">Vantagens S.I</a>
+                    </li>
+
+                    <li>
+                        <a href="#Popular I.S" class="navbar-link">S.I populares</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="navbar-link">Contacto</a>
+                    </li>
+
+                    <li>
+                        <a href="Login" class="navbar-link">Login</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="container">
+
+            <!--
+              - #HERO
+            -->
+
+            <section class="hero" id="home">
+
+                <figure class="hero-banner">
+
+
+                    <img src="~/images//beneficios-sistemas-1-removebg-preview.png" alt="Face-img" class="w-100">
+
+
+                </figure>
+
+                <div class="hero-content">
+
+                    <h2 class="h2 hero-title">Explora o mundo de Sistemas de Informação</h2>
+
+                    <a href="#contact" class="btn btn-primary">Contacte-nos</a>
+
+                </div>
+
+                <ul class="hero-social-list">
+
+                    <li>
+                        <a href="https://www.facebook.com/inete.pt/?locale=pt_PT" class="hero-social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+
+                            <div class="tooltip">Facebook</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/inete_lisboa/?hl=pt" class="hero-social-link">
+                            <ion-icon name="logo-Instagram"></ion-icon>
+
+                            <div class="tooltip">Instagram</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/company/inete/?originalSubdomain=pt" class="hero-social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+
+                            <div class="tooltip">Linkedin</div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="#stats" class="scroll-down">Scroll</a>
+
+            </section>
+
+
+
+
+
+            <!--
+              - #ABOUT
+            -->
+
+            <section class="about" id="about">
+
+                <figure class="about-banner">
+                    <img src="~/images/INETE-img.png" alt="INETE Logo" class="w-100">
+                </figure>
+
+                <div class="about-content section-content">
+
+                    <p class="section-subtitle">Sobre nós</p>
+
+                    <h2 class="h3 section-title">TGPSI22.02</h2>
+
+                    <p class="section-text">
+                        Olá! Somos alunos de programação da escola INETE (Instituto de Educação Técnica). </br>
+                        Nós desenvolvemos este website sobre Sistemas de Informação devido a um projeto. </br>
+                        Nós escolhemos falar sobre Sistemas de Informação porque são úteis e importantes para o nosso futuro como
+                        programadores.
+                    </p>
+
+                    <a href="https://www.inete.pt/">
+                        <div class="btn-group">
+
+                            <button class="btn btn-secondary">Sobre a nossa escola</button>
+
+                        </div>
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+            <!--
+              - #ABOUT IDE
+            -->
+
+            <section class="about" id="aboutI.S">
+
+                <div class="about-content section-content">
+
+                    <p class="section-subtitle">Sobre S.I</p>
+
+                    <h2 class="h3 section-title">O que é um sistema de informação?</h2>
+
+                    <p class="section-text">
+                        Um sistema de informação é um conjunto de componentes que recolhem, processam,
+                        armazenam e distribuem informação.</br>
+                        Essa informação é utilizada de diferentes formas dependendo do tipo de S.I.
+                    </p>
+                </div>
+
+                <figure class="about-banner">
+                    <img src="~/images/InformationSystems.png" alt="A man in a alice blue shirt with a thinking expression"
+                         class="w-100">
+                </figure>
+
+
+
+            </section>
+            <!-- IDE Features -->
+            <section class="skills" id="I.S Advantages">
+                <h2 class="h3 section-title" data-translate="ideFeatures">Vantagens de S.I</h2>
+                </br>
+
+                <div class="skills-content">
+                    <div class="skill-card">
+                        <img src="~/images/feature-icon1.png" alt="Code Completion" class="skill-icon">
+                        <h3>Redução de erros</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="~/images/feature-icon2.png" alt="Debugging Tools" class="skill-icon">
+                        <h3>Proteção de dados</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="~/images/feature-icon3.png" alt="Version Control Integration" class="skill-icon">
+                        <h3>Custo Benefício</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="~/images/feature-icon4.png" alt="Built-in Terminal" class="skill-icon">
+                        <h3>Centralização de informação</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- POPULAR IDEs -->
+            <section class="project" id="Popular I.S">
+                <ul class="project-list">
+                    <li>
+                        <div class="project-content section-content">
+                            <p class="section-subtitle" data-translate="popularIdes">S.I populares</p>
+                            <h2 class="h3 section-title">Sistemas de Informação mais utilizados</h2>
+
+                            <p class="section-text">
+                                Aqui estão os Sistemas de Informação mais utilizados devido às suas
+                                funcionalidades e
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project-card">
+                            <figure class="card-banner">
+                                <img src="~/images/erp.png" class="w-100" alt="Visual Studio Code">
+                            </figure>
+                            <div class="card-content">
+                                <h3 class="h4 card-title">Enterprise Resource Planning</h3>
+                                <time class="publish-date">
+                                    Um ERP otimiza operações internas, </br> o fluxo de informações entre </br>
+                                    os diferentes departamentos </br> e melhora a eficiência e a tomada de decisões.
+                                </time>
+
+                                <label for="modal-toggle1" class="learn-more-btn">Saiba mais</label>
+
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project-card">
+                            <figure class="card-banner">
+                                <img src="~/images/mis.png" class="w-100" alt="IntelliJ IDEA">
+                            </figure>
+                            <div class="card-content">
+                                <h3 class="h4 card-title">Management Information System</h3>
+                                <time class="publish-date">
+                                    MIS é um sistema que fornece aos </br> gestores informação para realizarem
+                                    decisões </br> sobre as operações de uma organização.
+                                </time>
+
+                                <label for="modal-toggle2" class="learn-more-btn">Saiba mais</label>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project-card">
+                            <figure class="card-banner"><img src="~/images/dss.png" class="w-100" alt="Eclipse IDE"></figure>
+                            <div class="card-content">
+                                <h3 class="h4 card-title">Decision Support System</h3>
+                                <time class="publish-date">
+                                    DSS fornece informações necessárias </br>para a gestão eficaz de uma
+                                    organização.
+                                </time>
+
+                                <label for="modal-toggle3" class="learn-more-btn">Saiba mais</label>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li><button id="loadMoreBtn" class="btn btn-secondary" data-translate="loadMore">Ver mais</button></li>
+                </ul>
+            </section>
+
+
+            <!--
+              - #ERP
+            -->
+            <!-- Hidden Checkbox for Modal Toggle -->
+            <input type="checkbox" id="modal-toggle1" class="modal-toggle">
+
+            <!-- Modal Structure -->
+            <div class="modal-overlay">
+                <div class="modal">
+                    <label for="modal-toggle1" class="close-modal-btn">×</label>
+                    <h2>Enterprise Resource Planning</h2>
+                    <p>
+                        <br>
+                        Integração de Dados
+                        Os sistemas ERP integram dados de diferentes áreas da empresa, como finanças, recursos humanos, vendas,
+                        estoque e produção, em uma única base de dados. Isso elimina a duplicação de informações e garante que todos
+                        os departamentos tenham acesso a dados atualizados e precisos.
+                        <br>
+                        <br>
+                        Automação de Processos
+                        O ERP automatiza processos empresariais, como faturamento, gestão de pedidos e controle de stock. Isso reduz
+                        a necessidade de intervenção manual e minimiza erros, aumentando a eficiência operacional.
+                        <br>
+                        <br>
+                        Melhoria na Tomada de Decisões
+                        Com dados centralizados e em tempo real, os gestores podem criar relatórios e análises mais precisas,
+                        facilitando a tomada de decisões estratégicas e permitindo uma visão mais clara do desempenho da empresa.
+                        <br>
+                        <br>
+                        Flexibilidade e Escalabilidade
+                        Os sistemas ERP são projetados para serem flexíveis e escaláveis, permitindo que as empresas ajustem suas
+                        operações e adicionem novos módulos conforme suas necessidades crescem ou mudam.
+                        <br>
+                        <br>
+                        Redução de Custos
+                        Embora a implementação de um ERP possa exigir um investimento inicial significativo, a automação e a
+                        eficiência que ele proporciona podem levar a uma redução de custos a longo prazo, otimizando recursos e
+                        processos.
+                    </p>
+                </div>
+            </div>
+            </input>
+
+            <input type="checkbox" id="modal-toggle4" class="modal-toggle">
+            <!-- Modal Structure -->
+            <div class="modal-overlay">
+                <div class="modal">
+                    <label for="modal-toggle4" class="close-modal-btn">×</label>
+                    <h2>Transaction Processing System</h2>
+                    <p>
+                        <br>
+                        Recolha de Dados: O sistema recolhe dados de várias fontes, como sistemas de transação (TPS) e bases de
+                        dados.
+                        <br>
+                        <br>
+                        Processamento de Dados: Os dados recolhidos são processados para transformá-los em informações úteis. Isso
+                        pode incluir a realização de cálculos, a agregação de dados e a análise de tendências.
+                        <br>
+                        <br>
+                        Armazenamento de Dados: Os dados processados são armazenados em uma base de dados para uso futuro,
+                        garantindo que as informações estejam disponíveis para relatórios e análises.
+                        <br>
+                        <br>
+                        Disseminação de Informações: O MIS distribui informações relevantes para os gerentes e outros utilizadores
+                        através de relatórios e apresentações.
+                        <br>
+                        <br>
+                        Suporte à Decisão: Fornece informações e análises que ajudam os gerentes a tomar decisões estratégicas,
+                        táticas e operacionais
+                    </p>
+                </div>
+            </div>
+            </input>
+
+            <input type="checkbox" id="modal-toggle2" class="modal-toggle">
+            <!-- Modal Structure -->
+            <div class="modal-overlay">
+                <div class="modal">
+                    <label for="modal-toggle2" class="close-modal-btn">×</label>
+                    <h2>Management Information System</h2>
+                    <p>
+                        <br>
+                        Recolha de Dados: O sistema recolhe dados de várias fontes, como sistemas de transação (TPS) e bases de
+                        dados.
+                        <br>
+                        <br>
+                        Processamento de Dados: Os dados recolhidos são processados para transformá-los em informações úteis. Isso
+                        pode incluir a realização de cálculos, a agregação de dados e a análise de tendências.
+                        <br>
+                        <br>
+                        Armazenamento de Dados: Os dados processados são armazenados em uma base de dados para uso futuro,
+                        garantindo que as informações estejam disponíveis para relatórios e análises.
+                        <br>
+                        <br>
+                        Disseminação de Informações: O MIS distribui informações relevantes para os gerentes e outros utilizadores
+                        através de relatórios e apresentações.
+                        <br>
+                        <br>
+                        Suporte à Decisão: Fornece informações e análises que ajudam os gerentes a tomar decisões estratégicas,
+                        táticas e operacionais
+                    </p>
+                </div>
+            </div>
+            </input>
+
+            <input type="checkbox" id="modal-toggle5" class="modal-toggle">
+            <!-- Modal Structure -->
+            <div class="modal-overlay">
+                <div class="modal">
+                    <label for="modal-toggle5" class="close-modal-btn">×</label>
+                    <h2>Client Relashionship Management</h2>
+                    <p>
+                        <br>
+                        Centralização de Dados: O CRM armazena informações sobre clientes em um único local, incluindo o histórico
+                        de compras, preferências, interações e feedback, permitindo que as equipes acessem dados relevantes de
+                        maneira rápida e fácil.
+                        <br>
+                        <br>
+                        Automação de Vendas e Marketing: O sistema pode automatizar tarefas repetitivas, como o envio de e-mails,
+                        lembretes de follow-up e agendamento de reuniões, aumentando a eficiência das equipes de vendas e marketing.
+                        <br>
+                        <br>
+                        Análise de Dados: Os sistemas de CRM oferecem ferramentas de análise e relatórios que ajudam a entender o
+                        comportamento do cliente, identificar tendências e medir o desempenho de campanhas de marketing.
+                        <br>
+                        <br>
+                        Segmentação de Clientes: As empresas podem segmentar os seus clientes com base em diversos critérios, como
+                        comportamento de compra, demografia e interesses, permitindo campanhas de marketing mais direcionadas.
+                    </p>
+                </div>
+            </div>
+            </input>
+
+            <input type="checkbox" id="modal-toggle6" class="modal-toggle">
+
+            <!-- Modal Structure -->
+            <div class="modal-overlay">
+                <div class="modal">
+                    <label for="modal-toggle6" class="close-modal-btn">×</label>
+                    <h2>Supply Chain Management</h2>
+                    <p>
+                        <br>
+                        Integração: O SCM integra todos os componentes da cadeia de suprimentos, incluindo planejamento, aquisição,
+                        produção, logística e distribuição. Isso permite uma coordenação eficaz entre diferentes departamentos e
+                        parceiros.
+                        <br>
+                        <br>
+                        Visibilidade: Oferece uma visão em tempo real do estado da cadeia de suprimentos, permitindo que as empresas
+                        identifiquem rapidamente problemas, como interrupções no fornecimento ou flutuações na demanda.
+                        <br>
+                        <br>
+                        Colaboração: Promove a colaboração entre todos os participantes da cadeia, incluindo fornecedores,
+                        fabricantes, distribuidores e clientes, melhorando a comunicação e a coordenação.
+                        <br>
+                        <br>
+                        Tecnologia: Utiliza tecnologia avançada, como software de SCM, para otimizar processos, analisar dados e
+                        facilitar a tomada de decisões.
+                        <br>
+                        <br>
+                        Planejamento: Envolve a previsão de demanda, planejamento de produção e gestão de estoques para garantir que
+                        os produtos certos estejam disponíveis no momento certo.
+                        <br>
+                        <br>
+                        Produção: Gere o processo de fabricação, assegurando que os produtos sejam produzidos de maneira eficiente e
+                        de acordo com os padrões de qualidade.
+                        <br>
+                        <br>
+                        Logística: Envolve o transporte e armazenamento de produtos, garantindo que eles cheguem aos destinos
+                        corretos no prazo estipulado.
+                        <br>
+                        <br>
+                        Distribuição: Gere a entrega de produtos aos clientes finais, incluindo a gestão de canais de distribuição e
+                        estratégias de atendimento ao cliente
+                    </p>
+                </div>
+            </div>
+            </input>
+
+            <input type="checkbox" id="modal-toggle3" class="modal-toggle">
+            <!-- Modal Structure -->
+            <div class="modal-overlay">
+                <div class="modal">
+                    <label for="modal-toggle3" class="close-modal-btn">×</label>
+                    <h2>Decision Support System</h2>
+                    <p>
+                        <br>
+                        Interatividade: O DSS permite a interação com os dados de forma dinâmica, permitindo que os utilizadores
+                        explorem diferentes cenários, façam simulações e avaliem o impacto de diferentes decisões.
+                        <br>
+                        <br>
+                        Modelos Analíticos: O sistema utiliza modelos analíticos e matemáticos, como análises de tendências,
+                        previsões e otimizações, para ajudar a processar dados e gerar insights.
+                        <br>
+                        <br>
+                        Foco na Flexibilidade: O DSS oferece flexibilidade ao utilizador, permitindo que os gestores modifiquem
+                        parâmetros, testem hipóteses e avaliem múltiplas alternativas de ação.
+                        <br>
+                        <br>
+                        Análise de Dados: O sistema processa e analisa os dados para apresentar alternativas e previsões. Isso pode
+                        incluir análises estatísticas, modelos de simulação e técnicas de otimização.
+                        <br>
+                        <br>
+                        Criação de Relatórios: Um DSS cria relatórios claros e detalhados, muitas vezes apresentados de maneira
+                        visual, como gráficos e dashboards, facilitando a interpretação dos dados.
+                        <br>
+                        <br>
+                        Suporte à Tomada de Decisões: Ajuda os gestores a comparar diferentes opções e a escolher a alternativa mais
+                        apropriada com base em dados, modelos e previsões
+                    </p>
+                </div>
+            </div>
+            </input>
+
+
+            <!--
+                -#Reviews
+            -->
+            <section class="Reviews" id="Reviews">
+                <div class="Reviews-content section-content">
+                    <p class="section-subtitle">Reviews</p>
+                    <div>
+                        <h3 id="Reviews"> Vê algumas reviews sobre S.I!</h3>
+                    </div>
+                    <div id="ReviewsClients">
+                        </br>
+                        John Doe: </br> ERPs tornaram a minha vida mais fácil, acho que é um dos melhores tipos de S.I!ajsdghaghadgdhgasjhdgggggg
+                        ggggggggggggggggggggggggggggggggggg
+                        gggggggggggggggggggggggggggggggggg
+                        gggggggggggggggggjjj
+                        jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj Lorem ipsum dolor sit amet consectetur adipisi
+                        cing elit. Dolorem debitis quas voluptatibus id consequuntur molestias rerum fugit laudantium. Beatae ali
+                        as autem rerum eveniet porro quo, praesentium cumque veniam animi quasi!s
+                        <br>
+                        <br>
+                        Maria Duarte: <br> Eu gosto muito de usar S.I do tipo DSS, eles ajudam-me a fazer decisões!
+                        <br>
+                        <br>
+                        Joseph: <br> Wow! Não consigo imaginar a minha vida sem um TPS, é muito prestável!!!
+                    </div>
+                </div>
+                </div>
+            </section>
+
+
+            <!--
+              - #User Comments
+            -->
+
+
+
+            <section class="comment" id="comment">
+
+                <div class="comment-content section-content">
+
+                    <p class="section-subtitle">Comentários</p>
+
+                    <h2 class="h3 section-title">Deixa um comentário!</h2>
+
+                    <form action="" class="comment-form">
+
+                        <div class="form-wrapper">
+
+                            <label for="name" class="form-label">Nome</label>
+
+                            <div class="input-wrapper">
+
+                                <input type="text" name="name" id="name" required placeholder="Nome" class="input-field">
+
+                                <ion-icon name="person-circle"></ion-icon>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-wrapper">
+
+                            <label for="email" class="form-label">Email</label>
+
+                            <div class="input-wrapper">
+
+                                <input type="email" name="email" id="email" required placeholder="Email" class="input-field">
+
+                                <ion-icon name="mail"></ion-icon>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-wrapper">
+
+                            <label for="message" class="form-label">Comentário</label>
+
+                            <div class="input-wrapper">
+
+                                <textarea name="message" id="message" required placeholder="Escreve um comentário..."
+                                          class="input-field"></textarea>
+
+                                <ion-icon name="chatbubbles"></ion-icon>
+
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+
+                    </form>
+
+
+                    <!-- Some Comments -->
+
+                    <div class="Commentsexample-content">
+
+                        <h2 class="h3 section-title">Vê os comentários deixados por outros users</h2>
+
+
+
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Joaquim</h4>
+                            <h3>Adoro Sistemas de informação porque reduzem erros</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>José</h4>
+                            <h3>Proteção de dados</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Diogo</h4>
+                            <h3>Custo Benefício</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Mario</h4>
+                            <h3>Centralização de informação</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Joana</h4>
+                            <h3>Exemplo muito bom!!</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Ana Catarina</h4>
+                            <h3>Mesmo fixeee</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Pedro</h4>
+                            <h3>Que amazing</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>André</h4>
+                            <h3>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate cumque distinctio tempora
+                                <br>voluptatum ipsum necessitatibus voluptates ad ipsam quas, a deserunt velit
+                            </h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Zé</h4>
+                            <h3>QUe cool amazing super duper cool</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Ricardo</h4>
+                            <h3>OoOoOoOoOoOoO bue top</h3>
+                        </div>
+                        <div class="comment-card">
+                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                            <h4>Bruna</h4>
+                            <h3>Horrivel!! Nao gostei estava muito mau mesmo!</h3>
+                        </div>
+
+
+            </section>
+
+
+            <!--
+              - #CONTACT
+            -->
+
+            <section class="contact" id="contact">
+
+                <div class="contact-content section-content">
+
+                    <p class="section-subtitle">Contacto</p>
+
+                    <h2 class="h3 section-title">Alguma questão sobre S.I? </br> Contacta-nos!</h2>
+
+                    <p class="section-text">
+                        Queres saber qual Sistema de Informação é mais indicado para ti?
+                        </br> Contacta-nos e nós ajudamos.
+                    </p>
+
+                    <ul class="contact-list">
+
+                        <li class="contact-list-item">
+
+                            <div class="contact-item-icon">
+                                <ion-icon name="location-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Morada:</h3>
+
+                                <address class="contact-info">
+                                    Rua Alexandre Braga , n.º 25, 1169-220 Lisboa
+                                </address>
+                            </div>
+
+                        </li>
+
+                        <li class="contact-list-item">
+
+                            <div class="contact-item-icon">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Telefone:</h3>
+
+                                <a href="tel:01234567789" class="contact-info">+351 927 273 876</a>
+
+                                <a href="tel:09765432200" class="contact-info">+351 934 613 107</a>
+                            </div>
+
+                        </li>
+
+                        <li class="contact-list-item">
+
+                            <div class="contact-item-icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+
+                            <div class="wrapper">
+                                <h3 class="h4 contact-item-title">Email:</h3>
+
+                                <a href="mailto:I220099@inete.net" class="contact-info">I220099@inete.net</a>
+
+                                <a href="mailto:I220102@inete.net" class="contact-info">I220102@inete.net</a>
+
+                                <a href="mailto:I220118@inete.net" class="contact-info">I220118@inete.net</a>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <ul class="contac-social-list">
+
+                                <li>
+                                    <a href="https://www.facebook.com/inete.pt/" class="contact-social-link">
+                                        <div class="tooltip">Facebook</div>
+
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.instagram.com/inete_lisboa/" class="contact-social-link">
+                                        <div class="tooltip">Instagram</div>
+
+                                        <ion-icon name="logo-Instagram"></ion-icon>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.linkedin.com/company/inete#:~:text=Inform%C3%A1tica,%20Gest%C3%A3o,%20Eletr%C3%B3nica%20e%20Automa%C3%A7%C3%A3o,%20%C3%93tica%20Ocular,"
+                                       class="contact-social-link">
+                                        <div class="tooltip">Linkedin</div>
+
+                                        <ion-icon name="logo-linkedin"></ion-icon>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.youtube.com/EscolaInete/videos" class="contact-social-link">
+                                        <div class="tooltip">Youtube</div>
+
+                                        <ion-icon name="logo-youtube"></ion-icon>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <form action="" class="contact-form">
+
+                    <div class="form-wrapper">
+
+                        <label for="name" class="form-label">Nome</label>
+
+                        <div class="input-wrapper">
+
+                            <input type="text" name="name" id="name" required placeholder="Nome" class="input-field">
+
+                            <ion-icon name="person-circle"></ion-icon>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-wrapper">
+
+                        <label for="email" class="form-label">Email</label>
+
+                        <div class="input-wrapper">
+
+                            <input type="email" name="email" id="email" required placeholder="Email" class="input-field">
+
+                            <ion-icon name="mail"></ion-icon>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-wrapper">
+
+                        <label for="phone" class="form-label">Telemóvel</label>
+
+                        <div class="input-wrapper">
+
+                            <input type="tel" name="phone" id="phone" required placeholder="Número de telemóvel" class="input-field">
+
+                            <ion-icon name="call"></ion-icon>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-wrapper">
+
+                        <label for="message" class="form-label">Mensagem</label>
+
+                        <div class="input-wrapper">
+
+                            <textarea name="message" id="message" required placeholder="Escreve uma mensagem..."
+                                      class="input-field"></textarea>
+
+                            <ion-icon name="chatbubbles"></ion-icon>
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+
+                </form>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <h1 class="h1 logo">DataVision<span>.</span></h1>
+            <p class="footer-text" data-translate="footerText">© 2024 DataVision. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js" defer></script>
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
