@@ -40,6 +40,7 @@ namespace Datavision.Pages
             string phone = Request.Form["phone"];
             string message = Request.Form["message"];
 
+            Generic.contacts.Add(new Contact(name, email, phone, message));
 
             return RedirectToPage();
         }
