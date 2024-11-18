@@ -573,7 +573,7 @@
 
                             <div class="input-wrapper">
 
-                                <input type="text" name="Username" id="name" required placeholder="Nome" class="input-field">
+                                <input type="text" name="CommentUsername" id="name" required placeholder="Nome" class="input-field">
 
                                 <ion-icon name="person-circle"></ion-icon>
 
@@ -622,66 +622,19 @@
 
                         <h2 class="h3 section-title">Vê os comentários deixados por outros users</h2>
 
+                        @{
+                            foreach(Comment comment in Generic.ListOfComments)
+                            {
 
+                                <div class="comment-card">
+                                    <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                                    <h4>@comment.Username</h4>
+                                    <h3>@comment.Content</h3>
+                                </div>
+                            }
+                        }
 
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Joaquim</h4>
-                            <h3>Adoro Sistemas de informação porque reduzem erros</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>José</h4>
-                            <h3>Proteção de dados</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Diogo</h4>
-                            <h3>Custo Benefício</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Mario</h4>
-                            <h3>Centralização de informação</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Joana</h4>
-                            <h3>Exemplo muito bom!!</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Ana Catarina</h4>
-                            <h3>Mesmo fixeee</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Pedro</h4>
-                            <h3>Que amazing</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>André</h4>
-                            <h3>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate cumque distinctio tempora
-                                <br>voluptatum ipsum necessitatibus voluptates ad ipsam quas, a deserunt velit
-                            </h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Zé</h4>
-                            <h3>QUe cool amazing super duper cool</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Ricardo</h4>
-                            <h3>OoOoOoOoOoOoO bue top</h3>
-                        </div>
-                        <div class="comment-card">
-                            <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                            <h4>Bruna</h4>
-                            <h3>Horrivel!! Nao gostei estava muito mau mesmo!</h3>
-                        </div>
+                       
 
 
             </section>

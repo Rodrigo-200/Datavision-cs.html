@@ -11,11 +11,11 @@ namespace Datavision.Pages
 
         public IActionResult OnPostLogin()
         {
-            
+            return RedirectToPage();
         }
         public IActionResult OnPostRegistrer()
         {
-            
+            return RedirectToPage();
         }
     }
 }

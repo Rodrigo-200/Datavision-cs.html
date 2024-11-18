@@ -19,9 +19,16 @@ namespace Datavision.Pages
 
         public IActionResult OnPostComment()
         {
-            string name = Request.Form["Username"];
+            string name = Request.Form["CommentUsername"];
             string email = Request.Form["Commentemail"];
             string Comment = Request.Form["Comment"];
+
+            Comment NewComment = new Comment();
+            NewComment.Username = name;
+            NewComment.Email = email;
+            NewComment.Content = Comment;
+
+            Generic.ListOfComments.Add(NewComment);
 
            return RedirectToPage();
         }
