@@ -23,12 +23,12 @@ namespace Datavision.Pages
             string email = Request.Form["Commentemail"];
             string Comment = Request.Form["Comment"];
 
-            return;
+           return RedirectToPage();
         }
 
         public IActionResult OnPostContact()
         {
-            return;
+            return RedirectToPage();
         }
     }
 }
