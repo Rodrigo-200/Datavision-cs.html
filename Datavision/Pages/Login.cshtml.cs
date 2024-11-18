@@ -46,9 +46,6 @@ namespace Datavision.Pages
                 //Colocar mensagem de erro!!!
                 return RedirectToPage();
             }
-<<<<<<< HEAD
-            return RedirectToPage();
-=======
             else
             {
                 User user = new User();
@@ -59,9 +56,6 @@ namespace Datavision.Pages
                 Generic.ListOfUsers.Add(user);
                 return RedirectToPage();
             }
-            
-
->>>>>>> e48f4d080cc0618ad8405c3efbb767dde7229a10
         }
     }
 }
