@@ -18,10 +18,19 @@ namespace Datavision.Pages
 
             if (user != null)
             {
-                return RedirectToAction("Index", "Home");
+                //Verificar se o user é um Admin
+                if (user.Name == "admin")
+                {
+                    return RedirectToPage("AdminPage");
+                }
+                else
+                {
+                    return RedirectToPage("Index");
+                }
             }
             else
             {
+                //Colocar mensagem de erro!!!
                 return RedirectToPage();
             }
 
@@ -32,16 +41,22 @@ namespace Datavision.Pages
             string Email = Request.Form["Email"];
             string Password_User = Request.Form["Register_Password"];
 
-
-            User user = new User();
-            user.Name = Name_User;
-            user.Email = Email;
-            user.Password = Password_User;
-
-            if(Name_User=="")
+            if ((Generic.ListOfUsers.Where(u => u.Name == Name_User).FirstOrDefault() != null) && (Generic.ListOfUsers.Where(u => u.Email == Email).FirstOrDefault() != null))
             {
-
+                //Colocar mensagem de erro!!!
+                return RedirectToPage();
             }
+            else
+            {
+                User user = new User();
+                user.Name = Name_User;
+                user.Email = Email;
+                user.Password = Password_User;
+
+                Generic.ListOfUsers.Add(user);
+                return RedirectToPage();
+            }
+            
 
         }
     }
