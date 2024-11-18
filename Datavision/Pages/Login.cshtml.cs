@@ -42,7 +42,7 @@ namespace Datavision.Pages
             {
 
             }
-
+            return RedirectToPage();
         }
     }
 }
