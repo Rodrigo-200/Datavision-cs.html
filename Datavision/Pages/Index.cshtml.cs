@@ -28,6 +28,12 @@ namespace Datavision.Pages
 
         public IActionResult OnPostContact()
         {
+            string name = Request.Form["name"];
+            string email = Request.Form["email"];
+            string phone = Request.Form["phone"];
+            string message = Request.Form["message"];
+
+
             return RedirectToPage();
         }
     }
