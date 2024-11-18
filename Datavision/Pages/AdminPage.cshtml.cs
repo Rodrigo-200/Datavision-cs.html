@@ -7,6 +7,7 @@ namespace Datavision.Pages
     {
         public void OnGet()
         {
+
         }
     }
 }
