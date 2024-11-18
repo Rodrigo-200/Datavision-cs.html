@@ -42,7 +42,7 @@ namespace Datavision.Pages
 
             Generic.contacts.Add(new Contact(name, email, phone, message));
 
-            return RedirectToPage();
+            return RedirectToPage("AdminPage");
         }
     }
 }
