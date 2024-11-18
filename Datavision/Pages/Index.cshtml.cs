@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Runtime.InteropServices;
 
 namespace Datavision.Pages
 {
@@ -23,14 +24,17 @@ namespace Datavision.Pages
             string email = Request.Form["Commentemail"];
             string Comment = Request.Form["Comment"];
 
-            Comment NewComment = new Comment();
-            NewComment.Username = name;
-            NewComment.Email = email;
-            NewComment.Content = Comment;
+            Comment newComment = new Comment
+            {
+                Username = name,
+                Email = email,
+                Content = Comment
+            };
 
-            Generic.ListOfComments.Add(NewComment);
+            Generic.ListOfComments.Add(newComment);
 
-           return RedirectToPage();
+            TempData["Fragment"] = "comment";
+            return Page();
         }
 
         public IActionResult OnPostContact()

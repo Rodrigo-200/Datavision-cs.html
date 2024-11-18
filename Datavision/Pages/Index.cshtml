@@ -557,12 +557,15 @@
             <section class="comment" id="comment">
 
                 <div class="comment-content section-content">
+                    
+                    
+
 
                     <p class="section-subtitle">Comentários</p>
 
                     <h2 class="h3 section-title">Deixa um comentário!</h2>
 
-                    <form class="comment-form" method="post" asp-page-handler="Comment">
+                    <form class="comment-form" method="post" asp-page-handler="comment">
 
                         <div class="form-wrapper">
 
@@ -613,6 +616,7 @@
                     </form>
 
 
+                </div>
                     <!-- Some Comments -->
 
                     <div class="Commentsexample-content">
@@ -630,10 +634,7 @@
                                 </div>
                             }
                         }
-
-                       
-
-
+                    </div>
             </section>
 
 
@@ -830,6 +831,18 @@
     <!-- Icons --> 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if there's a fragment set in TempData and redirect to it
+            var fragment = '@TempData["Fragment"]';
+            if (fragment) {
+                window.location.hash = fragment;
+                // Clear the fragment from TempData to avoid repeated redirections
+                '@TempData["Fragment"] = null';
+            }
+        });
+    </script>
 
 </body>
 
