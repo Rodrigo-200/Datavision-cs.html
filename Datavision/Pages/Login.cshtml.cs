@@ -1,10 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
 namespace Datavision.Pages
 {
     public class LoginModel : PageModel
     {
+        [BindProperty]
+        [Required(ErrorMessage = "Login inválido")]
+        public string Password_User { get; set; }
+
         public void OnGet()
         {
         }
@@ -31,7 +36,8 @@ namespace Datavision.Pages
             else
             {
                 //Colocar mensagem de erro!!!
-                return RedirectToPage();
+                ModelState.AddModelError(string.Empty,"User Not Found.");
+                return Page();
             }
 
         }
@@ -45,6 +51,7 @@ namespace Datavision.Pages
             {
                 //Colocar mensagem de erro!!!
                 return RedirectToPage();
+                
             }
             else
             {
