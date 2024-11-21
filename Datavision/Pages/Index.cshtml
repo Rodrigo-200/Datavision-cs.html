@@ -521,32 +521,68 @@
             <!--
                 -#Reviews
             -->
-            <section class="Reviews" id="Reviews">
-                <div class="Reviews-content section-content">
-                    <p class="section-subtitle">Reviews</p>
-                    <div>
-                        <h3 id="Reviews"> Vê algumas reviews sobre S.I!</h3>
-                    </div>
-                    <div id="ReviewsClients">
-                        <br/>
-                        John Doe: <br/> ERPs tornaram a minha vida mais fácil, acho que é um dos melhores tipos de S.I!ajsdghaghadgdhgasjhdgggggg
-                        ggggggggggggggggggggggggggggggggggg
-                        gggggggggggggggggggggggggggggggggg
-                        gggggggggggggggggjjj
-                        jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj Lorem ipsum dolor sit amet consectetur adipisi
-                        cing elit. Dolorem debitis quas voluptatibus id consequuntur molestias rerum fugit laudantium. Beatae ali
-                        as autem rerum eveniet porro quo, praesentium cumque veniam animi quasi!s
-                        <br>
-                        <br>
-                        Maria Duarte: <br> Eu gosto muito de usar S.I do tipo DSS, eles ajudam-me a fazer decisões!
-                        <br>
-                        <br>
-                        Joseph: <br> Wow! Não consigo imaginar a minha vida sem um TPS, é muito prestável!!!
-                    </div>
-                </div>
-                </div>
-            </section>
+            @{/* I220110 */}
+            <section class="review" id="review">
 
+                <div class="review-content section-content">
+
+                    <p class="section-subtitle">Reviews</p>
+
+                    <h2 class="h3 section-title">Deixa um review!</h2>
+
+                    <form class="review-form" mehtod="Post" asp-page-handler="Review">
+
+                        <div class="form-wrapper">
+
+                            <label for="name" class="form-label">Nome</label>
+
+                            <div class="input-wrapper">
+
+                                <input type="text" name="username" id="name" required placeholder="Nome" class="input-field">
+
+                                <ion-icon name="person-circle"></ion-icon>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-wrapper">
+
+                            <label for="email" class="form-label">Email</label>
+
+                            <div class="input-wrapper">
+
+                                <input type="email" name="email" id="email" required placeholder="Email" class="input-field">
+
+                                <ion-icon name="mail"></ion-icon>
+
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="form-wrapper">
+
+                            <label for="message" class="form-label">Review</label>
+
+                            <div class="input-wrapper">
+
+                                <textarea name="review" id="message" required placeholder="Escreve um review..."
+                                          class="input-field"></textarea>
+
+                                <ion-icon name="chatbubbles"></ion-icon>
+
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <h2 class="h3 section-title">Reviews</h2>
+                    </form>
+
+                </div>
+
+             </section>
 
             <!--
               - #User Comments
