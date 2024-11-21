@@ -17,7 +17,15 @@ namespace Datavision.Pages
         {
 
         }
-
+        public IActionResult OnPostReview()
+        {
+            string name = Request.Form["username"];
+            string email = Request.Form["email"];
+            string message = Request.Form["review"];
+            Comment newReview = new Comment(name, email, message);
+            Generic.reviews.Add(newReview);
+            return Page();
+        }
         public IActionResult OnPostComment()
         {
             string name = Request.Form["CommentUsername"];
