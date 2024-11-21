@@ -614,6 +614,70 @@ main {
 
 
 
+/*-----------------------------------*\
+ * #Some comments
+\*-----------------------------------*/
+
+/* Remove background color for the comment section */
+.Contactexample-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between feature cards */
+    justify-content: center; /* Center the cards */
+    padding: 20px; /* Add padding around the section */
+}
+
+/* Comment Card Styles */
+.contact-card {
+    background: #8d7b7b; /* Set the card background to white */
+    border-radius: 12px; /* Slightly rounded corners */
+    padding: 20px;
+    text-align: center; /* Center align text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling effect */
+    position: relative; /* To position the text */
+    min-width: 150px; /* Set a minimmum width */
+    min-height: 150px; /* Set a fixed height */
+    scrollbar-color: transparent;
+}
+
+.contact-icon {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.contact-card h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark text for visibility */
+}
+
+.contact-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    border-radius: 12px; /* Slightly rounded corners */
+}
+
+.contact-card::after {
+    content: ""; /* Create an overlay effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Subtle overlay for depth */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+    border-radius: 12px; /* Slightly rounded corners */
+}
+
+.contact-card:hover::after {
+    opacity: 1; /* Show overlay on hover */
+    border-radius: 12px; /* Slightly rounded corners */
+}
+
 
 
 /*-----------------------------------*\
@@ -987,6 +1051,12 @@ textarea.input-field {
     margin-bottom: 10px;
 }
 
+.admincontact-item-title {
+    margin-bottom: 10px;
+    color: #b2700b;
+    font-size: larger;
+}
+
 .contact-list-item .contact-info {
     color: var(--color-secondary);
     font-style: normal;
@@ -1036,6 +1106,20 @@ textarea.input-field {
     box-shadow: var(--shadow-1);
 }
 
+.admincontact-form {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-1);
+    flex-grow: 4;
+}
+
+.admincontact-form:hover {
+        transform: scale(1.05); /* Scale effect on hover */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+
 .form-wrapper {
     margin-bottom: 25px;
 }
@@ -1043,6 +1127,14 @@ textarea.input-field {
 .form-label {
     color: var(--color-primary);
     font-size: var(--fs-7);
+    font-family: var(--ff-poppins);
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
+.contactform-label {
+    color: var(--color-primary);
+    font-size: medium;
     font-family: var(--ff-poppins);
     margin-bottom: 8px;
     margin-left: 5px;
