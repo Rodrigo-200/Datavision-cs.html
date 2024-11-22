@@ -6,9 +6,9 @@ namespace Datavision.Pages
 {
     public class LoginModel : PageModel
     {
-        [BindProperty]
+        /*[BindProperty]
         [Required(ErrorMessage = "Login inválido")]
-        public string Password_User { get; set; }
+        public string Password_User { get; set; }*/
 
         public void OnGet()
         {
@@ -36,7 +36,7 @@ namespace Datavision.Pages
             else
             {
                 //Colocar mensagem de erro!!!
-                ModelState.AddModelError(string.Empty,"User Not Found.");
+                ModelState.AddModelError("Login Inválido", "Login Inválido");
                 return Page();
             }
 

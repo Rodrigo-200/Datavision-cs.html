@@ -141,10 +141,10 @@
                             <ion-icon name="key"></ion-icon>
                         </div>
                         <!-- Display the error message if the user does not exist -->
-                        @if (ModelState.ContainsKey(string.Empty) && ModelState[string.Empty].Errors.Count > 0)
+                        @if (ModelState.ContainsKey("Login Inválido") && ModelState[string.Empty].Errors.Count > 0)
                         {
                             <div class="alert alert-danger">
-                                @ModelState[string.Empty].Errors[0].ErrorMessage
+                                @ModelState["Login Inválido"].Errors[0].ErrorMessage
                             </div>
                         }
                         <button id="Loginbtn">Login</button>
