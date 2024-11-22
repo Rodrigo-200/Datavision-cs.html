@@ -1,6 +1,5 @@
 ﻿@page
 @model IndexModel
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -299,7 +298,7 @@
                             </div>
                         </div>
                     </li>
-                    <li><button id="loadMoreBtn" class="btn btn-secondary" data-translate="loadMore">Ver mais</button></li>
+                    <li><button name="seemore" id="loadMoreBtn" class="btn btn-secondary" data-translate="loadMore">Ver mais</button></li>
                 </ul>
             </section>
 
@@ -567,14 +566,14 @@
 
                             <div class="input-wrapper">
 
-                                <textarea name="review" id="message" required placeholder="Escreve um review..."
+                                <textarea name="review" id="message" required placeholder="Escreve uma review..."
                                           class="input-field"></textarea>
 
                                 <ion-icon name="chatbubbles"></ion-icon>
 
                             </div>
 
-                            <label for="email" class="form-label">Your review</label>
+                            <label for="email" class="form-label">Your rating</label>
 
                             <div class="star-input">
                                 <input type="radio" name="stars" id="star1" value="1" required><label for="star1" title="1 stars">&#9733;</label>
@@ -628,7 +627,7 @@
                                 <input type="text" name="CommentUsername" id="name" required placeholder="Nome" class="input-field">
 
                                 <ion-icon name="person-circle"></ion-icon>
-
+                                
                             </div>
 
                         </div>

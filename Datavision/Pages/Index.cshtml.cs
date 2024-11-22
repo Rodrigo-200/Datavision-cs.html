@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Reflection.Metadata;
 using System.Runtime.InteropServices;
 
 namespace Datavision.Pages
@@ -43,6 +44,7 @@ namespace Datavision.Pages
             };
 
             Generic.ListOfComments.Add(newComment);
+
 
             TempData["Fragment"] = "comment";
             return Page();

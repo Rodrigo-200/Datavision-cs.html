@@ -1,4 +1,4 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
@@ -143,19 +143,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const additionalIS = [
         {
             title: "Transaction Processing System",
-            imgSrc: "./assets/images/tps.png",
+            imgSrc: "/images/tps.png",
             date: "TPS é usado para recolher, armazenar, modificar </br> e recuperar dados relacionados </br> com transações comerciais.",
             for: "modal-toggle4"
         },
         {
             title: "Customer Relationship Management",
-            imgSrc: "./assets/images/CRM-img.png",
+            imgSrc: "/images/CRM-img.png",
             date: "CRM gere e analisa as interações </br> e os dados dos clientes para melhorar </br> o serviço ao cliente.",
             for: "modal-toggle5"
         },
         {
             title: "Supply Chain Management",
-            imgSrc: "./assets/images/SCM-img.png",
+            imgSrc: "/images/SCM-img.png",
             date: "SCM gere o fluxo de bens e serviços, melhora </br> a eficiência, reduz custos, aumenta a qualidade </br> e garante a entrega pontual dos produtos.",
             for: "modal-toggle6"
         },
