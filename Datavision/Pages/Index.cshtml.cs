@@ -53,8 +53,8 @@ namespace Datavision.Pages
             string message = Request.Form["message"];
 
             Generic.contacts.Add(new Contact(name, email, phone, message));
-
-            return RedirectToPage("AdminPage");
+            TempData["Fragment"] = "contact";
+            return RedirectToPage("");
         }
     }
 }
