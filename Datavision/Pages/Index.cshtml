@@ -163,8 +163,8 @@
                     <h2 class="h3 section-title">TGPSI22.02</h2>
 
                     <p class="section-text">
-                        Olá! Somos alunos de programação da escola INETE (Instituto de Educação Técnica). <br/>
-                        Nós desenvolvemos este website sobre Sistemas de Informação devido a um projeto. <br/>
+                        Olá! Somos alunos de programação da escola INETE (Instituto de Educação Técnica). <br />
+                        Nós desenvolvemos este website sobre Sistemas de Informação devido a um projeto. <br />
                         Nós escolhemos falar sobre Sistemas de Informação porque são úteis e importantes para o nosso futuro como
                         programadores.
                     </p>
@@ -197,7 +197,7 @@
 
                     <p class="section-text">
                         Um sistema de informação é um conjunto de componentes que recolhem, processam,
-                        armazenam e distribuem informação.<br/>
+                        armazenam e distribuem informação.<br />
                         Essa informação é utilizada de diferentes formas dependendo do tipo de S.I.
                     </p>
                 </div>
@@ -213,7 +213,7 @@
             <!-- IDE Features -->
             <section class="skills" id="I.S Advantages">
                 <h2 class="h3 section-title" data-translate="ideFeatures">Vantagens de S.I</h2>
-                <br/>
+                <br />
 
                 <div class="skills-content">
                     <div class="skill-card">
@@ -257,8 +257,8 @@
                             <div class="card-content">
                                 <h3 class="h4 card-title">Enterprise Resource Planning</h3>
                                 <time class="publish-date">
-                                    Um ERP otimiza operações internas, <br/> o fluxo de informações entre <br/>
-                                    os diferentes departamentos <br/> e melhora a eficiência e a tomada de decisões.
+                                    Um ERP otimiza operações internas, <br /> o fluxo de informações entre <br />
+                                    os diferentes departamentos <br /> e melhora a eficiência e a tomada de decisões.
                                 </time>
 
                                 <label for="modal-toggle1" class="learn-more-btn">Saiba mais</label>
@@ -275,8 +275,8 @@
                             <div class="card-content">
                                 <h3 class="h4 card-title">Management Information System</h3>
                                 <time class="publish-date">
-                                    MIS é um sistema que fornece aos <br/> gestores informação para realizarem
-                                    decisões <br/> sobre as operações de uma organização.
+                                    MIS é um sistema que fornece aos <br /> gestores informação para realizarem
+                                    decisões <br /> sobre as operações de uma organização.
                                 </time>
 
                                 <label for="modal-toggle2" class="learn-more-btn">Saiba mais</label>
@@ -290,7 +290,7 @@
                             <div class="card-content">
                                 <h3 class="h4 card-title">Decision Support System</h3>
                                 <time class="publish-date">
-                                    DSS fornece informações necessárias <br/>para a gestão eficaz de uma
+                                    DSS fornece informações necessárias <br />para a gestão eficaz de uma
                                     organização.
                                 </time>
 
@@ -376,7 +376,7 @@
                     </p>
                 </div>
             </div>
-            
+
 
             <input type="checkbox" id="modal-toggle2" class="modal-toggle">
             <!-- Modal Structure -->
@@ -521,12 +521,14 @@
             <!--
                 -#Reviews
             -->
-            @{/* I220110 */}
+            @{
+                /* I220110 */
+            }
             <section class="review" id="review">
 
                 <div class="review-content section-content">
 
-                    <p class="section-subtitle">Reviews</p> 
+                    <p class="section-subtitle">Reviews</p>
 
                     <h2 class="h3 section-title">Deixe uma review!</h2>
 
@@ -560,7 +562,7 @@
 
                         </div>
 
-                        
+
                         <div class="form-wrapper">
 
                             <label for="message" class="form-label">Review</label>
@@ -591,15 +593,11 @@
 
                 </div>
 
-             </section>
+            </section>
 
-             <!-- 
-                 -Some reviews
-             -->
-
-
-
-
+            <!--
+                -Some reviews
+            -->
             <!--
               - #User Comments
             -->
@@ -609,8 +607,8 @@
             <section class="comment" id="comment">
 
                 <div class="comment-content section-content">
-                    
-                    
+
+
 
 
                     <p class="section-subtitle">Comentários</p>
@@ -669,24 +667,24 @@
 
 
                 </div>
-                    <!-- Some Comments -->
+                <!-- Some Comments -->
 
-                    <div class="Commentsexample-content">
+                <div class="Commentsexample-content">
 
-                        <h2 class="h3 section-title">Vê os comentários deixados por outros users</h2>
+                    <h2 class="h3 section-title">Vê os comentários deixados por outros users</h2>
 
-                        @{
-                            foreach(Comment comment in Generic.ListOfComments)
-                            {
+                    @{
+                        foreach (Comment comment in Generic.ListOfComments)
+                        {
 
-                                <div class="comment-card">
-                                    <ion-icon name="person-circle" class="comment-icon"></ion-icon>
-                                    <h4>@comment.Username</h4>
-                                    <h3>@comment.Content</h3>
-                                </div>
-                            }
+                            <div class="comment-card">
+                                <ion-icon name="person-circle" class="comment-icon"></ion-icon>
+                                <h4>@comment.Username</h4>
+                                <h3>@comment.Content</h3>
+                            </div>
                         }
-                    </div>
+                    }
+                </div>
             </section>
 
 
@@ -700,11 +698,11 @@
 
                     <p class="section-subtitle">Contacto</p>
 
-                    <h2 class="h3 section-title">Alguma questão sobre S.I? <br/> Contacta-nos!</h2>
+                    <h2 class="h3 section-title">Alguma questão sobre S.I? <br /> Contacta-nos!</h2>
 
                     <p class="section-text">
                         Queres saber qual Sistema de Informação é mais indicado para ti?
-                        <br/> Contacta-nos e nós ajudamos.
+                        <br /> Contacta-nos e nós ajudamos.
                     </p>
 
                     <ul class="contact-list">
@@ -802,7 +800,9 @@
 
                 </div>
 
-                @{/* I220110 */}
+                @{
+                    /* I220110 */
+                }
                 <form class="contact-form" method="post" asp-page-handler="Contact">
 
                     <div class="form-wrapper">
@@ -880,7 +880,7 @@
 
     <!-- Custom JS -->
     <script src="~/js/site.js" defer></script>
-    <!-- Icons --> 
+    <!-- Icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

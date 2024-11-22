@@ -9,5 +9,15 @@ namespace Datavision.Pages
         {
 
         }
+
+        public IActionResult OnPost(int id) {
+
+            if (id >= 0 && id < Generic.contacts.Count)
+            {
+                Generic.contacts.RemoveAt(id);
+            }
+
+            return RedirectToPage();
+        }
     }
 }

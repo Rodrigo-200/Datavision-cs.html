@@ -59,25 +59,32 @@
                 <p class="section-subtitle">Contactos</p>
 
                 <h2 class="h3 section-title">Contactos dos utilizadores</h2>
-            <div class="Commentsexample-content">
-            @{
-                foreach (Contact contact in Generic.contacts)
-                {
-                    <div class="admincontact-form">
-                            <h4 class="h4 admincontact-item-title">Name</h4>
-                        <label for="name" class="contactform-label">@contact.Name</label>
-                            <h4 class="h4 admincontact-item-title">Email</h4>
-                        <label for="email" class="contactform-label">@contact.Email</label>
-                            <h4 class="h4 admincontact-item-title">Phone</h4>
-                        <label for="phone" class="contactform-label">@contact.Phone</label>
-                            <h4 class="h4 admincontact-item-title">Message</h4>
-                        <label for="message" class="contactform-label">@contact.Message</label>
-                    </div>
-                    <br />
-                    <br />
-                }
-            }
-            </div>
+                <div class="Commentsexample-content">
+                    @{
+                        for (int i = 0; i < Generic.contacts.Count; i++)
+                        {
+                            Contact contact = Generic.contacts[i];
+
+                            <div class="admincontact-form">
+                                <h4 class="h4 admincontact-item-title">Name</h4>
+                                <label for="name" class="contactform-label">@contact.Name</label>
+                                <h4 class="h4 admincontact-item-title">Email</h4>
+                                <label for="email" class="contactform-label">@contact.Email</label>
+                                <h4 class="h4 admincontact-item-title">Phone</h4>
+                                <label for="phone" class="contactform-label">@contact.Phone</label>
+                                <h4 class="h4 admincontact-item-title">Message</h4>
+                                <label for="message" class="contactform-label">@contact.Message</label>
+
+                                <form method="post">
+                                    <input type="hidden" name="id" value="@i"/>
+                                    <button class="btn btn-secondary" type="submit">Remove</button>
+                                </form>
+                            </div>
+                            <br />
+                            <br />
+                        }
+                    }
+                </div>
             </div>
         </section>
     </main>
