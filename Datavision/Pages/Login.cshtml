@@ -128,6 +128,12 @@
             <section id="Login_Section">
                 <form id="LoginForm" class="Loginreg-form" asp-page-handler="Login">
                     <div class="form-wrapper">
+                        @if (ModelState.ContainsKey("Login_Inválido"))
+                        {
+                            <div class="alert alert-danger">
+                                <h3 class="alert-error">@ModelState["Login_Inválido"].Errors[0].ErrorMessage</h3>
+                            </div>
+                        }
                         <label class="form-label">Nome de utilizador</label>
                         <div class="input-wrapper">
                             <input type="text" name="Nome_User" id="Nome_User" required placeholder="Nome de Utilizador" class="input-field">
@@ -140,13 +146,6 @@
                             <input type="password" name="Password" id="Password" required placeholder="Password" class="input-field">
                             <ion-icon name="key"></ion-icon>
                         </div>
-                        <!-- Display the error message if the user does not exist -->
-                        @if (ModelState.ContainsKey("Login Inválido") && ModelState[string.Empty].Errors.Count > 0)
-                        {
-                            <div class="alert alert-danger">
-                                @ModelState["Login Inválido"].Errors[0].ErrorMessage
-                            </div>
-                        }
                         <button id="Loginbtn">Login</button>
 
                     </div>
@@ -196,5 +195,17 @@
     <script src="~/js/site.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if there's a fragment set in TempData and redirect to it
+            var fragment = '@TempData["Fragment"]';
+            if (fragment) {
+                window.location.hash = fragment;
+                // Clear the fragment from TempData to avoid repeated redirections
+                '@TempData["Fragment"] = null';
+            }
+        });
+    </script>
 </body>
 </html>
