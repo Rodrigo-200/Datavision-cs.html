@@ -7,11 +7,12 @@
         public string Phone { get; set; }
         public string Message { get; set; }
 
-        public Contact(string Name, string Email, string Phone, string Message) {
+        public Contact(string Name, string Email, string Phone, string Message)
+        {
             this.Name = Name;
             this.Email = Email;
             this.Phone = Phone;
             this.Message = Message;
-        }    
+        }
     }
 }

@@ -22,8 +22,11 @@ namespace Datavision.Pages
             string name = Request.Form["username"];
             string email = Request.Form["email"];
             string message = Request.Form["review"];
-            Comment newReview = new Comment(name, email, message);
+            int stars = int.Parse(Request.Form["stars"]);
+
+            Review newReview = new Review(name, email, message, stars);
             Generic.reviews.Add(newReview);
+
             return Page();
         }
         public IActionResult OnPostComment()
