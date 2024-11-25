@@ -48,7 +48,7 @@ namespace Datavision.Pages
             string Email = Request.Form["Email"];
             string Password_User = Request.Form["Register_Password"];
 
-            if ((Generic.ListOfUsers.Where(u => u.Name == Name_User).FirstOrDefault() != null) && (Generic.ListOfUsers.Where(u => u.Email == Email).FirstOrDefault() != null))
+            if ((Generic.ListOfUsers.Where(u => u.Name == Name_User).FirstOrDefault() != null) || (Generic.ListOfUsers.Where(u => u.Email == Email).FirstOrDefault() != null))
             {
                 //Colocar mensagem de erro!!!
                 ModelState.AddModelError("Registo_Inválido", "Uma conta com este username ou email já existe.");
