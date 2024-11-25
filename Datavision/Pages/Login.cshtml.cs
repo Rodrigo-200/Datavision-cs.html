@@ -12,6 +12,7 @@ namespace Datavision.Pages
 
         public void OnGet()
         {
+
         }
 
         public IActionResult OnPostLogin()
@@ -26,10 +27,12 @@ namespace Datavision.Pages
                 //Verificar se o user é um Admin
                 if (user.Name == "admin")
                 {
+                    HttpContext.Session.SetString("Login", "Admin");
                     return RedirectToPage("AdminPage");
                 }
                 else
                 {
+                    HttpContext.Session.SetString("Login", "User");
                     return RedirectToPage("Index");
                 }
             }

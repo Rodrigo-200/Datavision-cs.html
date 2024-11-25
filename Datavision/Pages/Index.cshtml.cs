@@ -9,6 +9,7 @@ namespace Datavision.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+        
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -16,7 +17,10 @@ namespace Datavision.Pages
 
         public void OnGet()
         {
-
+            if (HttpContext.Session.GetString("Login") != "User")
+            {
+                RedirectToPage("/");
+            }
         }
         public IActionResult OnPostReview()
         {
@@ -35,7 +39,6 @@ namespace Datavision.Pages
             string name = Request.Form["CommentUsername"];
             string email = Request.Form["Commentemail"];
             string Comment = Request.Form["Comment"];
-
             Comment newComment = new Comment
             {
                 Username = name,

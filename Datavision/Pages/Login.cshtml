@@ -39,31 +39,36 @@
             </button>
             <nav class="navbar" data-navbar>
                 <ul class="navbar-list">
+                    @{
+                        if (HttpContext.Session.GetString("Login") == "User")
+                        {
 
-                    <li>
-                        <a href="Index" href="#about" class="navbar-link">Home</a>
-                    </li>
+                            <li>
 
-                    <li>
-                        <a href="Index" class="navbar-link">Sobre Nós</a>
-                    </li>
+                                <a href="Index" href="#about" class="navbar-link">Home @HttpContext.Session.GetString("Login")</a>
+                            </li>
 
-                    <li>
-                        <a href="Index" class="navbar-link">Sobre S.I</a>
-                    </li>
+                            <li>
+                                <a href="Index" class="navbar-link">Sobre Nós</a>
+                            </li>
 
-                    <li>
-                        <a href="Index" class="navbar-link">Vantagens S.I</a>
-                    </li>
+                            <li>
+                                <a href="Index" class="navbar-link">Sobre S.I</a>
+                            </li>
 
-                    <li>
-                        <a href="Index" class="navbar-link">S.I populares</a>
-                    </li>
+                            <li>
+                                <a href="Index" class="navbar-link">Vantagens S.I</a>
+                            </li>
 
-                    <li>
-                        <a href="Index" class="navbar-link">Contacto</a>
-                    </li>
+                            <li>
+                                <a href="Index" class="navbar-link">S.I populares</a>
+                            </li>
 
+                            <li>
+                                <a href="Index" class="navbar-link">Contacto</a>
+                            </li>
+                        }
+                    }
                 </ul>
             </nav>
         </div>
