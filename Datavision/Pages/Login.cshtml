@@ -163,6 +163,12 @@
             <section id="Register_Section" style="display: none;">
                 <form id="RegisterForm" class="Loginreg-form" asp-page-handler="Registrer">
                     <div class="form-wrapper">
+                        @if (ModelState.ContainsKey("Registo_Inválido"))
+                        {
+                            <div class="alert alert-danger">
+                                <h3 class="alert-error">@ModelState["Registo_Inválido"].Errors[0].ErrorMessage</h3>
+                            </div>
+                        }
                         <label class="form-label">Nome de utilizador</label>
                         <div class="input-wrapper">
                             <input type="text" name="Register_Nome_User" id="Register_Nome_User" required placeholder="Nome de Utilizador" class="input-field">
