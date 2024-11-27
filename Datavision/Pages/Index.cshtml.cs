@@ -15,12 +15,14 @@ namespace Datavision.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
             if (HttpContext.Session.GetString("Login") != "User")
             {
-                RedirectToPage("/");
+                return RedirectToPage("/Login");
             }
+            // Return the page if the user is logged in
+            return Page();
         }
         public IActionResult OnPostReview()
         {
@@ -32,6 +34,7 @@ namespace Datavision.Pages
             Review newReview = new Review(name, email, message, stars);
             Generic.reviews.Add(newReview);
 
+            TempData["Fragment"] = "review";
             return Page();
         }
         public IActionResult OnPostComment()

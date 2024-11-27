@@ -1289,6 +1289,69 @@ textarea.input-field {
         color: gold;
     }
 
+.reviews-display {
+    padding: 2rem 0;
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.review-card {
+    background-color: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    flex: 1 1 calc(33.333% - 1.5rem);
+    box-sizing: border-box;
+    color: var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .review-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    color: var(--raw-seinna);
+}
+
+.review-username {
+    font-size: 1.2rem;
+    font-weight: var(--fw-700);
+    color: var(--raw-seinna);
+}
+
+.star-rating {
+    margin-left: auto;
+}
+
+.star {
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+    .star.filled {
+        color: #ffcc00;
+    }
+
+.review-content {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-secondary);
+}
+
 
 
 

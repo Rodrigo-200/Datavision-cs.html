@@ -5,11 +5,15 @@ namespace Datavision.Pages
 {
     public class AdminPageModel : PageModel
     {
-        public void OnGet()
+        public IActionResult OnGet()
         {
-
+            if (HttpContext.Session.GetString("Login") != "Admin")
+            {
+                return RedirectToPage("/Login");
+            }
+            // Return the page if the user is logged in
+            return Page();
         }
-
         public IActionResult OnPost(int id) {
 
             if (id >= 0 && id < Generic.contacts.Count)
